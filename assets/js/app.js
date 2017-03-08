@@ -1,7 +1,7 @@
 var app = angular.module('app', ['ngAnimate'])
 
 app.controller('appCtrl', function($scope, $interval, enemyService, randomService, userService) {
-  
+    $scope.rulez = true
     $scope.show = false
 
     $scope.enemyStyle = function(enemy){

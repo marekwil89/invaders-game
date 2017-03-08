@@ -16,12 +16,22 @@
       <h2>Only for Desktops :(</h2>
     </section>
 
+    <section ng-show="rulez" class="rulez-modal">
+      <div class="rulez-box">
+        <div ng-click="rulez = false" class="close-rulez">X</div>
+        <h2>Rulez<span>.</span></h2>
+        <figure>
+          <img src="./assets/images/game-screen.png" alt="">
+        </figure>
+        <p>To start the game enter your name, select the difficulty level and press the "Start Game". To get points, click on appearing monsters. Some of the monsters are more difficult. Each hit gives you 1000 points. Have fun and kill them all.</p>
+      </div>
+    </section>
+
 	<section ng-if="!show" class="menu-section">
-
+  
 	  <h1 class="glitch" data-text="Invaders">Invaders<span class="red-dot">.</span></h1>
-	  <p class="player-points" ng-if="activeUser.points">gameover you get {{activeUser.points}} points</p>  
+	  <p class="player-points" ng-show="activeUser.points">gameover you get {{activeUser.points}} points</p>  
       <form ng-submit="createNewUser(user)">
-
         <fieldset>
           <legend>Player Name</legend>
           <input type="text" ng-model="user.name" required>
