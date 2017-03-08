@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Invaders</title>
+
+
+	<link rel="stylesheet" type="text/css" href="assets/sass/style.css">
+
+  </head>
+  <body ng-app="app" ng-controller="appCtrl">
+
+    <section class="only-for-desktop">
+      <h2>Only for Desktops :(</h2>
+    </section>
+
+	<section ng-if="!show" class="menu-section">
+
+	  <h1 class="glitch" data-text="Invaders">Invaders<span class="red-dot">.</span></h1>
+	  <p class="player-points" ng-if="activeUser.points">gameover you get {{activeUser.points}} points</p>  
+      <form ng-submit="createNewUser(user)">
+
+        <fieldset>
+          <legend>Player Name</legend>
+          <input type="text" ng-model="user.name" required>
+        </fieldset>
+        <fieldset>
+          <legend>Difficulty Level</legend>
+          <select ng-model="user.difficulty" required>
+            <option value="">-- Select lvl --</option>
+            <option value="1200">Easy</option>
+            <option value="1000">Medium</option>
+            <option value="700">Hard</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <input type="submit" value="Start">
+        </fieldset>          
+      </form>
+	</section>
+	
+	<section ng-if="show" class="game-area-section">
+	  <p class="player-points">Points {{activeUser.points}}</p>
+      <ul class="enemies-box">
+        <li class="enemy {{enemy.type}}" ng-style="enemyStyle({{enemy}})" ng-click="enemyHit($index, activeUser.weapon)" ng-repeat="enemy in enemies">
+          <img ng-src="./assets/images/{{enemy.type | lowercase}}.svg" alt="monster image">
+          <p>{{enemy.hp}} hp</p>
+          <progress-bar cur-val="{{enemy.hp}}" max-val="{{enemy.maxHp}}"></progress-bar>
+        </li>
+      </ul>
+	</section>
+	<script src="./bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="./bower_components/angular/angular.min.js"></script>
+	<script src="./bower_components/angular-animate/angular-animate.min.js"></script>    
+    <script src="./assets/js/app.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,16 @@
+<svg width="150" height="150" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+ <g>
+  <title>Layer 1</title>
+  <path fill-opacity="0.95" stroke-opacity="0.95" stroke="#222222" transform="rotate(-89.76914978027344 74.0027084350586,72.7943115234375) " id="svg_61" d="m11.05987,10.34185c78.92008,-21.69704 58.71431,37.36058 128.36406,-1.30906l-9.32202,107.87915c32.33809,51.23011 -57.44125,-0.57792 -121.52042,16.13946l0.64593,-106.32801z" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" fill="#222222"/>
+  <path fill-opacity="0.95" stroke-opacity="0.95" stroke="#ffffff" transform="rotate(1.2604343891143799 70.39854431152426,74.92871856689443) " id="sider-lips" d="m29.5238,74.92872l10.36646,-1.07097l-9.58126,-1.77112l10.75356,-0.32955l-8.42738,-2.40328l10.72721,0.42435l-6.94995,-2.94299l10.28867,1.16215l-5.20534,-3.36975l9.45476,1.85523l-3.26069,-3.66695l8.25732,2.477l-1.19063,-3.82324l6.74309,3.00357l0.92464,-3.83263l4.96938,3.41483l3.00491,-3.69468l3.00491,3.69468l4.96938,-3.41483l0.92464,3.83263l6.74309,-3.00357l-1.19063,3.82324l8.25731,-2.477l-3.26069,3.66695l9.45477,-1.85523l-5.20533,3.36975l10.28866,-1.16215l-6.94995,2.94299l10.72714,-0.42435l-8.42731,2.40328l10.75346,0.32955l-9.5811,1.77112l10.36639,1.07097l-10.36639,1.07097l9.5811,1.77112l-10.75346,0.32955l8.42731,2.40328l-10.72714,-0.42435l6.94995,2.94296l-10.28866,-1.16213l5.20533,3.36974l-9.45477,-1.85522l3.26069,3.66695l-8.25731,-2.47701l1.19063,3.82323l-6.74309,-3.00355l-0.92464,3.83261l-4.96938,-3.41477l-3.00491,3.69465l-3.00491,-3.69465l-4.96938,3.41477l-0.92464,-3.83261l-6.74309,3.00355l1.19063,-3.82323l-8.25732,2.47701l3.26069,-3.66695l-9.45476,1.85522l5.20534,-3.36974l-10.28867,1.16213l6.94995,-2.94296l-10.72721,0.42435l8.42738,-2.40328l-10.75356,-0.32955l9.58126,-1.77112l-10.36646,-1.07097z" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#ffffff"/>
+  <circle fill-opacity="0.95" stroke-opacity="0.95" stroke="#fff7f7" id="krager-eye-left" r="2.87398" cy="36.917" cx="54.19629" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="10" fill="#222222"/>
+  <circle fill-opacity="0.95" stroke-opacity="0.95" id="krager-eye-right" stroke="#fff7f7" r="2.87398" cy="39.76465" cx="91.33887" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="10" fill="#222222"/>
+ </g>
+<!--
+  <animate xlink:href="#krager-eye-left" attributeName="cx" 
+           from="45" to="60" dur="2s" repeatCount="indefinite" repeatDur="00:10"/>
+  <animate xlink:href="#krager-eye-right" attributeName="cx" 
+           from="85" to="95" dur="2s" repeatCount="indefinite" repeatDur="00:10"/>
+-->
+</svg>

@@ -1,0 +1,24 @@
+<svg width="150" height="150" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <defs>
+  <radialGradient id="svg_26" spreadMethod="pad">
+   <stop stop-color="#none" offset="0"/>
+   <stop stop-color="#NaNNaNNaN" offset="1"/>
+  </radialGradient>
+ </defs>
+ <g>
+  <title>Layer 1</title>
+  <circle fill-opacity="0.95" stroke-opacity="0.95" fill="#222222" stroke-width="1" cx="75.50002" cy="72.75" r="63.72562" id="svg_3" stroke="#222222"/>
+  <circle fill-opacity="0.95" stroke-opacity="0.95" stroke="#222222" class="monster-eye" fill="#ffffff" stroke-width="5" cx="76.24995" cy="91.62502" r="38.17716" id="svg_6"/>
+  <circle fill-opacity="0.95" stroke-opacity="0.95" id="monster-eye-dot" fill="#222222" stroke="#222222" stroke-width="5" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" cx="77.24995" cy="103.37502" r="14.51725" transform="rotate(2.12906551361084 77.2499465942384,103.37502288818348) "/>
+  <path fill-opacity="0.95" stroke-opacity="0.95" stroke="#222222" id="svg_1" class="tentacle4" fill="#222222" stroke-width="5" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" d="m131.62691,119.31213c1.67499,-26.33207 8.23765,0 0,33.85551c-8.23765,-33.85551 -1.67499,-60.18758 0,-33.85551z" transform="rotate(-45 131.62690734863276,130.8769073486328) "/>
+  <path fill-opacity="0.95" stroke-opacity="0.95" transform="rotate(45 21.069503784179705,129.81951904296875) " id="svg_2" stroke="#222222" class="tentacle4" fill="#222222" stroke-width="5" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" d="m21.06951,118.25474c1.67498,-26.33207 8.23764,0 0,33.85551c-8.23765,-33.85551 -1.67499,-60.18758 0,-33.85551z"/>
+  <path fill-opacity="0.95" stroke-opacity="0.95" id="svg_4" stroke="#222222" class="tentacle4" fill="#222222" stroke-width="5" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" d="m129.06951,10.25474c1.67498,-26.33207 8.23764,0 0,33.85551c-8.23765,-33.85551 -1.67499,-60.18758 0,-33.85551z" transform="rotate(-135 129.0695037841797,21.819513320922844) "/>
+  <path fill-opacity="0.95" stroke-opacity="0.95" transform="rotate(135 21.069507598876953,20.930492401123047) " id="svg_5" stroke="#222222" class="tentacle4" fill="#222222" stroke-width="5" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" d="m21.06951,9.36572c1.67498,-26.33207 8.23764,0 0,33.85551c-8.23765,-33.85551 -1.67499,-60.18758 0,-33.85551z"/>
+ </g>
+<!--
+    <animate xlink:href="#monster-eye-dot" attributeName="cx" 
+           from="55" to="90" dur="2s" repeatCount="indefinite" repeatDur="00:10" calcMode="linear" />
+-->
+</svg>
+
+<!--#222222-->

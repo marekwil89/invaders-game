@@ -1,0 +1,285 @@
+@import url("https://fonts.googleapis.com/css?family=Archivo+Black|VT323");
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain) */
+/* line 5, C:/Users/User/Desktop/game/assets/sass/reset.sass */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* line 25, C:/Users/User/Desktop/game/assets/sass/reset.sass */
+:focus {
+  outline: none; }
+
+/* HTML5 display-role reset for older browsers */
+/* line 29, C:/Users/User/Desktop/game/assets/sass/reset.sass */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/* line 33, C:/Users/User/Desktop/game/assets/sass/reset.sass */
+body {
+  line-height: 1; }
+
+/* line 36, C:/Users/User/Desktop/game/assets/sass/reset.sass */
+ol, ul {
+  list-style: none; }
+
+/* line 39, C:/Users/User/Desktop/game/assets/sass/reset.sass */
+blockquote, q {
+  quotes: none; }
+
+/* line 42, C:/Users/User/Desktop/game/assets/sass/reset.sass */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* line 47, C:/Users/User/Desktop/game/assets/sass/reset.sass */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@keyframes glitch-anim {
+  100% {
+    clip: rect(1000px, 1000px, 1000px, 1000px); } }
+
+@keyframes glitch-anim-2 {
+  100% {
+    clip: rect(1000px, 1000px, 1000px, 1000px); } }
+
+@keyframes grander-move-eye-lid {
+  0% {
+    y: 55; }
+  90% {
+    y: 55; }
+  95% {
+    y: 40; }
+  100% {
+    y: 55; } }
+
+@keyframes grander-move-eye-dot {
+  0% {
+    cx: 50; }
+  33% {
+    cx: 40; }
+  66% {
+    cx: 40;
+    cy: 70; }
+  100% {
+    cx: 50; } }
+
+@keyframes lightSpeedIn {
+  from {
+    transform: translate3d(100%, 0, 0) skewX(-30deg);
+    opacity: 0; }
+  60% {
+    transform: skewX(20deg);
+    opacity: 1; }
+  80% {
+    transform: skewX(-5deg);
+    opacity: 1; }
+  to {
+    transform: none;
+    opacity: 1; } }
+
+@keyframes lightSpeedOut {
+  from {
+    opacity: 1; }
+  to {
+    transform: translate3d(100%, 0, 0) skewX(30deg);
+    opacity: 0; } }
+
+/* line 56, C:/Users/User/Desktop/game/assets/sass/animations.sass */
+li.ng-enter {
+  animation: lightSpeedIn 0.3s linear; }
+
+/* line 59, C:/Users/User/Desktop/game/assets/sass/animations.sass */
+li.ng-leave {
+  animation: lightSpeedOut 0.3s linear; }
+
+/* line 10, C:/Users/User/Desktop/game/assets/sass/style.sass */
+.only-for-desktop {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: #111111;
+  width: 100%;
+  min-height: 100vh; }
+  /* line 18, C:/Users/User/Desktop/game/assets/sass/style.sass */
+  .only-for-desktop h2 {
+    color: #E53A40;
+    font-size: 27px; }
+
+/* line 22, C:/Users/User/Desktop/game/assets/sass/style.sass */
+*, body {
+  margin: 0;
+  letter-spacing: 4px;
+  font-family: 'VT323', monospace;
+  box-sizing: border-box;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+/* line 31, C:/Users/User/Desktop/game/assets/sass/style.sass */
+.menu-section {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #111111; }
+  /* line 41, C:/Users/User/Desktop/game/assets/sass/style.sass */
+  .menu-section .player-points {
+    color: #E53A40;
+    font-size: 25px; }
+  /* line 45, C:/Users/User/Desktop/game/assets/sass/style.sass */
+  .menu-section .glitch {
+    font-family: 'Archivo Black', sans-serif;
+    margin: 50px 0;
+    font-size: 100px;
+    text-transform: uppercase;
+    position: relative;
+    color: #F1F1F1;
+    font-weight: 800; }
+    /* line 54, C:/Users/User/Desktop/game/assets/sass/style.sass */
+    .menu-section .glitch .red-dot {
+      color: #E53A40; }
+    /* line 57, C:/Users/User/Desktop/game/assets/sass/style.sass */
+    .menu-section .glitch::before, .menu-section .glitch::after {
+      content: attr(data-text);
+      position: absolute;
+      background: transparent;
+      top: 0;
+      left: 0;
+      width: 100%; }
+    /* line 65, C:/Users/User/Desktop/game/assets/sass/style.sass */
+    .menu-section .glitch::before {
+      left: 10px;
+      text-shadow: -15px 0 #49fc00;
+      clip: rect(24px, 600px, 90px, 0);
+      animation: glitch-anim-2 0.4s infinite linear alternate-reverse; }
+    /* line 71, C:/Users/User/Desktop/game/assets/sass/style.sass */
+    .menu-section .glitch::after {
+      left: -6px;
+      text-shadow: -16px 0 #b300fc;
+      clip: rect(85px, 600px, 140px, 0);
+      animation: glitch-anim 0.3s infinite linear alternate-reverse; }
+  /* line 77, C:/Users/User/Desktop/game/assets/sass/style.sass */
+  .menu-section form {
+    width: 600px; }
+    /* line 80, C:/Users/User/Desktop/game/assets/sass/style.sass */
+    .menu-section form fieldset {
+      width: 100%;
+      margin: 20px 0; }
+      /* line 84, C:/Users/User/Desktop/game/assets/sass/style.sass */
+      .menu-section form fieldset legend {
+        color: #F1F1F1;
+        font-size: 20px;
+        margin: 20px 0; }
+      /* line 89, C:/Users/User/Desktop/game/assets/sass/style.sass */
+      .menu-section form fieldset select, .menu-section form fieldset input[type=text] {
+        color: #111111;
+        border-radius: 5px;
+        border: none;
+        padding: 10px;
+        width: 100%;
+        background: #F1F1F1;
+        font-size: 20px; }
+      /* line 98, C:/Users/User/Desktop/game/assets/sass/style.sass */
+      .menu-section form fieldset input[type=submit] {
+        cursor: pointer;
+        display: block;
+        border: none;
+        border-radius: 5px;
+        width: 500px;
+        margin: 30px auto;
+        padding: 10px;
+        font-size: 23px; }
+
+/* line 108, C:/Users/User/Desktop/game/assets/sass/style.sass */
+.game-area-section {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-image: url("http://img15.deviantart.net/04f2/i/2012/169/c/3/limbo_background__d_by_nekoabbzi-d53yj36.png");
+  background-size: cover;
+  background-repeat: no-repeat; }
+  /* line 117, C:/Users/User/Desktop/game/assets/sass/style.sass */
+  .game-area-section .player-points {
+    color: #E53A40;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 25px; }
+  /* line 124, C:/Users/User/Desktop/game/assets/sass/style.sass */
+  .game-area-section .enemies-box {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    cursor: crosshair;
+    overflow: hidden; }
+    /* line 131, C:/Users/User/Desktop/game/assets/sass/style.sass */
+    .game-area-section .enemies-box .enemy {
+      position: absolute;
+      width: 150px;
+      color: #F1F1F1;
+      transition: 0.3s all; }
+      /* line 137, C:/Users/User/Desktop/game/assets/sass/style.sass */
+      .game-area-section .enemies-box .enemy p {
+        text-align: center;
+        font-size: 18px;
+        margin: 5px 0; }
+      /* line 142, C:/Users/User/Desktop/game/assets/sass/style.sass */
+      .game-area-section .enemies-box .enemy .hp-bar {
+        background: #E53A40;
+        width: 100%;
+        height: 10px; }
+
+/* line 147, C:/Users/User/Desktop/game/assets/sass/style.sass */
+.progress-bar {
+  position: relative;
+  height: 20px; }
+  /* line 151, C:/Users/User/Desktop/game/assets/sass/style.sass */
+  .progress-bar .progress-bar-bar {
+    transform: scale(0.8);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #E53A40;
+    height: 100%; }
+
+@media screen and (max-width: 1000px) {
+  /* line 162, C:/Users/User/Desktop/game/assets/sass/style.sass */
+  .menu-section, game-area-section {
+    display: none; }
+  /* line 164, C:/Users/User/Desktop/game/assets/sass/style.sass */
+  .only-for-desktop {
+    display: flex; } }
+
+@media screen and (max-height: 700px) {
+  /* line 168, C:/Users/User/Desktop/game/assets/sass/style.sass */
+  .menu-section, game-area-section {
+    display: none; }
+  /* line 170, C:/Users/User/Desktop/game/assets/sass/style.sass */
+  .only-for-desktop {
+    display: flex; } }
+
+/*# sourceMappingURL=style.css.map */

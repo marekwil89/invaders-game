@@ -1,0 +1,16 @@
+
+<svg width="150" height="150" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+ <g>
+  <title>Layer 1</title>
+  <ellipse fill-opacity="0.95" stroke-opacity="0.95" stroke="#222222" ry="18.27246" rx="71.86378" id="svg_3" cy="123.84961" cx="75.0044" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" fill="#222222"/>
+  <path fill-opacity="0.95" stroke-opacity="0.95" stroke="#222222" transform="rotate(-89.78614044189453 74.21918487548828,62.86776733398438) " id="Krager-body" d="m15.4812,14.04931l58.73799,0l0,0c32.4401,0 58.73799,21.85676 58.73799,48.81845c0,26.96169 -26.29789,48.81845 -58.73799,48.81845l-58.73799,0l0,-97.6369z" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" fill="#222222"/>
+  <path fill-opacity="0.95" stroke-opacity="0.95" stroke="#222222" stroke-width="0" id="svg_7" d="m54.52871,38.44244l0,0c0,-10.94349 9.08394,-19.81494 20.28955,-19.81494l0,0c5.38112,0 10.54185,2.08764 14.34687,5.80366c3.80503,3.71602 5.94267,8.75603 5.94267,14.01128l0,0c0,10.94349 -9.08394,19.81494 -20.28955,19.81494l0,0c-11.20561,0 -20.28955,-8.87145 -20.28955,-19.81494zm10.14477,0l0,0c0,5.47174 4.54197,9.90747 10.14477,9.90747c5.6028,0 10.14477,-4.43573 10.14477,-9.90747c0,-5.47174 -4.54197,-9.90747 -10.14477,-9.90747l0,0c-5.6028,0 -10.14477,4.43573 -10.14477,9.90747z" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" fill="#ffffff"/>
+  <ellipse fill-opacity="0.95" stroke-opacity="0.95" stroke="#ffffff" ry="10.56006" rx="34.64649" id="krager-lips" cy="84.81299" cx="74.25293" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="#ffffff"/>
+ </g>
+<!--
+   <animate xlink:href="#krager-lips" attributeName="opacity" 
+           from="1" to="0" dur="0.5s" repeatCount="indefinite" repeatDur="00:10"/>
+-->
+  
+</svg>
