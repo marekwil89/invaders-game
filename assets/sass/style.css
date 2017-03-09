@@ -283,7 +283,7 @@ li.ng-leave {
     .game-area-section .enemies-box .enemy {
       position: absolute;
       width: 150px;
-      color: #F1F1F1;
+      color: #111111;
       transition: 0.3s all; }
       /* line 181, C:/Users/User/Desktop/game/assets/sass/style.sass */
       .game-area-section .enemies-box .enemy p {
