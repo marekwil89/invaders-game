@@ -312,7 +312,7 @@ li.ng-leave {
     background-color: #E53A40;
     height: 100%; }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 768px) {
   /* line 206, C:/Users/User/Desktop/game/assets/sass/style.sass */
   .menu-section, game-area-section {
     display: none; }
@@ -320,7 +320,7 @@ li.ng-leave {
   .only-for-desktop {
     display: flex; } }
 
-@media screen and (max-height: 700px) {
+@media screen and (max-height: 630px) {
   /* line 212, C:/Users/User/Desktop/game/assets/sass/style.sass */
   .menu-section, game-area-section {
     display: none; }
