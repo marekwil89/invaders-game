@@ -64,6 +64,41 @@ table {
   100% {
     clip: rect(1000px, 1000px, 1000px, 1000px); } }
 
+@keyframes grander-move-eye-lid {
+  0% {
+    y: 55; }
+  90% {
+    y: 55; }
+  95% {
+    y: 40; }
+  100% {
+    y: 55; } }
+
+@keyframes grander-move-eye-dot {
+  0% {
+    cx: 50; }
+  33% {
+    cx: 40; }
+  66% {
+    cx: 40;
+    cy: 70; }
+  100% {
+    cx: 50; } }
+
+@keyframes lightSpeedIn {
+  from {
+    transform: translate3d(100%, 0, 0) skewX(-30deg);
+    opacity: 0; }
+  60% {
+    transform: skewX(20deg);
+    opacity: 1; }
+  80% {
+    transform: skewX(-5deg);
+    opacity: 1; }
+  to {
+    transform: none;
+    opacity: 1; } }
+
 @keyframes lightSpeedOut {
   from {
     opacity: 1; }
@@ -229,7 +264,9 @@ li.ng-leave {
   width: 100%;
   min-height: 100vh;
   position: relative;
-  background: #111111;
+  background-image: url("http://img15.deviantart.net/04f2/i/2012/169/c/3/limbo_background__d_by_nekoabbzi-d53yj36.png");
+  background-size: cover;
+  background-repeat: no-repeat; }
   /* line 161, C:/Users/User/Desktop/game/assets/sass/style.sass */
   .game-area-section .player-points {
     color: #E53A40;
@@ -248,7 +285,7 @@ li.ng-leave {
     .game-area-section .enemies-box .enemy {
       position: absolute;
       width: 150px;
-      color: #111111;
+      color: #F1F1F1;
       transition: 0.3s all; }
       /* line 181, C:/Users/User/Desktop/game/assets/sass/style.sass */
       .game-area-section .enemies-box .enemy p {
