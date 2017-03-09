@@ -14,9 +14,12 @@
       <h2>Only for Desktops :(</h2>
     </section>
 
-    <section ng-show="rulez" class="rulez-modal">
+    <a type="button" class="open-rulez" ng-click="rulezModal = true">?</a>
+   
+   
+    <section ng-show="rulezModal" class="rulez-modal">
       <div class="rulez-box">
-        <div ng-click="rulez = false" class="close-rulez">X</div>
+        <a type="button" ng-click="rulezModal = false" class="close-rulez">X</a>
         <h2>Rulez<span>.</span></h2>
         <figure>
           <img src="./assets/images/game-screen.png" alt="">
@@ -26,7 +29,7 @@
     </section>
 
 	<section ng-if="!hideMenu" class="menu-section">
-  
+      
 	  <h1 class="glitch" data-text="Invaders">Invaders<span class="red-dot">.</span></h1>
 	  <p class="player-points" ng-show="activeUser.points">gameover you get {{activeUser.points}} points</p>  
       <form ng-submit="createNewUser(user)">
@@ -48,6 +51,8 @@
         </fieldset>          
       </form>
 	</section>
+	
+
 	
 	<section ng-if="hideMenu" class="game-area-section">
 	  <p class="player-points">Points {{activeUser.points}}</p>

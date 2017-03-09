@@ -3,7 +3,7 @@ var app = angular.module('app', ['ngAnimate'])
 app.controller('appCtrl', function($scope, $interval, enemyService, randomService, userService) {
 
     $scope.numToFail = 10
-    $scope.rulez = true
+    $scope.rulezModal = false
     $scope.hideMenu = false
     
     $scope.enemyPosition = function(enemy){
