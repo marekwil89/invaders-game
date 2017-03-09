@@ -264,7 +264,7 @@ li.ng-leave {
   width: 100%;
   min-height: 100vh;
   position: relative;
-  background-image: url("http://img15.deviantart.net/04f2/i/2012/169/c/3/limbo_background__d_by_nekoabbzi-d53yj36.png");
+  background-image: url("../images/limbo-bg.png");
   background-size: cover;
   background-repeat: no-repeat; }
   /* line 161, C:/Users/User/Desktop/game/assets/sass/style.sass */
@@ -314,7 +314,7 @@ li.ng-leave {
 
 @media screen and (max-width: 768px) {
   /* line 206, C:/Users/User/Desktop/game/assets/sass/style.sass */
-  .menu-section, game-area-section {
+  .menu-section, .game-area-section, .rulez-modal {
     display: none; }
   /* line 208, C:/Users/User/Desktop/game/assets/sass/style.sass */
   .only-for-desktop {
@@ -322,7 +322,7 @@ li.ng-leave {
 
 @media screen and (max-height: 630px) {
   /* line 212, C:/Users/User/Desktop/game/assets/sass/style.sass */
-  .menu-section, game-area-section {
+  .menu-section, .game-area-section, .rulez-modal {
     display: none; }
   /* line 214, C:/Users/User/Desktop/game/assets/sass/style.sass */
   .only-for-desktop {

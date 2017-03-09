@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Invaders</title>
-
-
 	<link rel="stylesheet" type="text/css" href="assets/sass/style.css">
 
   </head>
@@ -27,7 +25,7 @@
       </div>
     </section>
 
-	<section ng-if="!show" class="menu-section">
+	<section ng-if="!hideMenu" class="menu-section">
   
 	  <h1 class="glitch" data-text="Invaders">Invaders<span class="red-dot">.</span></h1>
 	  <p class="player-points" ng-show="activeUser.points">gameover you get {{activeUser.points}} points</p>  
@@ -51,10 +49,10 @@
       </form>
 	</section>
 	
-	<section ng-if="show" class="game-area-section">
+	<section ng-if="hideMenu" class="game-area-section">
 	  <p class="player-points">Points {{activeUser.points}}</p>
       <ul class="enemies-box">
-        <li class="enemy {{enemy.type}}" ng-style="enemyStyle({{enemy}})" ng-click="enemyHit($index, activeUser.weapon)" ng-repeat="enemy in enemies">
+        <li class="enemy {{enemy.type}}" ng-style="enemyPosition({{enemy}})" ng-click="enemyHit($index, activeUser.weapon)" ng-repeat="enemy in enemies">
           <img ng-src="./assets/images/{{enemy.type | lowercase}}.svg" alt="monster image">
           <p>{{enemy.hp}} hp</p>
           <progress-bar cur-val="{{enemy.hp}}" max-val="{{enemy.maxHp}}"></progress-bar>

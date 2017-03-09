@@ -1,10 +1,12 @@
 var app = angular.module('app', ['ngAnimate'])
 
 app.controller('appCtrl', function($scope, $interval, enemyService, randomService, userService) {
-    $scope.rulez = true
-    $scope.show = false
 
-    $scope.enemyStyle = function(enemy){
+    $scope.numToFail = 10
+    $scope.rulez = true
+    $scope.hideMenu = false
+    
+    $scope.enemyPosition = function(enemy){
       return enemyService.setEnemyOnArea(enemy)
     };
 
@@ -15,11 +17,11 @@ app.controller('appCtrl', function($scope, $interval, enemyService, randomServic
 			weapon: {name: "shootgun", power: 5},
 		}
 		$scope.activeUser = userService.newUser(data)
-        $scope.show = true
-        game()
+        $scope.hideMenu = true
+        startGame()
 	}
 	
-    var game = function(){
+    var startGame = function(){
       $scope.activeUser.points = userService.resetPoints()
       
       var enemyInterval = $interval(function () {
@@ -33,8 +35,8 @@ app.controller('appCtrl', function($scope, $interval, enemyService, randomServic
 
         enemyService.addEnemy(data)
         $scope.enemies = enemyService.getEnemies()
-        if($scope.enemies.length >= 10){
-          $scope.show = false
+        if($scope.enemies.length >= $scope.numToFail){
+          $scope.hideMenu = false
           $interval.cancel(enemyInterval);
           $scope.enemies = enemyService.resetArr()
         }
@@ -46,11 +48,7 @@ app.controller('appCtrl', function($scope, $interval, enemyService, randomServic
       enemyService.enemyHit(enemyId, weapon)
       $scope.enemies = enemyService.getEnemies()
     }
-    
-
-  
 })
-
 
 app.service('userService', function(){
     this.points = 0;
