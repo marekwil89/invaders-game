@@ -1,10 +1,17 @@
 var app = angular.module('app', ['ngAnimate'])
 
-app.controller('appCtrl', function($scope, $interval, enemyService, randomService, userService) {
+app.controller('appCtrl', function($scope, $interval, enemyService, randomService, userService, soundService) {
 
+    var startGameSound = soundService.startGameSound
+    var gameOverSound = soundService.gameOverSound
+    var enemyHitSound = soundService.enemyHitSound
+    var enemyArriveSound = soundService.enemyArriveSound
+  
     $scope.numToFail = 10
     $scope.rulezModal = false
     $scope.hideMenu = false
+    
+    
     
     $scope.enemyPosition = function(enemy){
       return enemyService.setEnemyOnArea(enemy)
@@ -22,6 +29,7 @@ app.controller('appCtrl', function($scope, $interval, enemyService, randomServic
 	}
 	
     var startGame = function(){
+      startGameSound.play()
       $scope.activeUser.points = userService.resetPoints()
       
       var enemyInterval = $interval(function () {
@@ -32,10 +40,13 @@ app.controller('appCtrl', function($scope, $interval, enemyService, randomServic
                 y: randomService.coordinateY()
             }
         }
-
+        
         enemyService.addEnemy(data)
+        enemyArriveSound.play()
+        
         $scope.enemies = enemyService.getEnemies()
         if($scope.enemies.length >= $scope.numToFail){
+          gameOverSound.play()
           $scope.hideMenu = false
           $interval.cancel(enemyInterval);
           $scope.enemies = enemyService.resetArr()
@@ -44,6 +55,7 @@ app.controller('appCtrl', function($scope, $interval, enemyService, randomServic
     };
 
     $scope.enemyHit = function(enemyId, weapon){
+      enemyHitSound.play()
       $scope.activeUser.points = userService.earnPoints()
       enemyService.enemyHit(enemyId, weapon)
       $scope.enemies = enemyService.getEnemies()
@@ -56,7 +68,7 @@ app.service('userService', function(){
     this.earnPoints = function(){
       return this.points = this.points + 1000;
     }
-  
+    
     this.resetPoints = function(){
       return this.points = 0
     }
@@ -151,6 +163,13 @@ app.service('randomService', function($window, enemyService){
 		return randomHeight
 	};
 });
+
+app.service('soundService', function(){
+  this.startGameSound = new Audio("./assets/sounds/gameStart.wav");
+  this.gameOverSound = new Audio("./assets/sounds/gameOver.wav");
+  this.enemyHitSound = new Audio("./assets/sounds/enemyHit.wav");
+  this.enemyArriveSound = new Audio("./assets/sounds/enemyArrive.wav");
+})
 
 
 app.directive('progressBar', [function () {
