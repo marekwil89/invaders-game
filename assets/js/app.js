@@ -7,9 +7,11 @@ app.controller('appCtrl', function($scope, $interval, enemyService, randomServic
     var enemyHitSound = soundService.enemyHitSound
     var enemyArriveSound = soundService.enemyArriveSound
   
-    $scope.numToFail = 10
-    $scope.rulezModal = false
-    $scope.hideMenu = false
+    $scope.numToFail = 10;
+    $scope.rulezModal = false;
+    $scope.hideMenu = false;
+    $scope.weapons = userService.weapons;
+    $scope.difficulty = userService.difficulty;
     
     
     
@@ -21,7 +23,7 @@ app.controller('appCtrl', function($scope, $interval, enemyService, randomServic
 		var data = {
 			name: newUser.name,
             difficulty: newUser.difficulty,
-			weapon: {name: "shootgun", power: 5},
+			weapon: newUser.weapon,
 		}
 		$scope.activeUser = userService.newUser(data)
         $scope.hideMenu = true
@@ -51,7 +53,7 @@ app.controller('appCtrl', function($scope, $interval, enemyService, randomServic
           $interval.cancel(enemyInterval);
           $scope.enemies = enemyService.resetArr()
         }
-      }, $scope.activeUser.difficulty);     
+      }, $scope.activeUser.difficulty.value);     
     };
 
     $scope.enemyHit = function(enemyId, weapon){
@@ -64,6 +66,28 @@ app.controller('appCtrl', function($scope, $interval, enemyService, randomServic
 
 app.service('userService', function(){
     this.points = 0;
+  
+    this.weapons = [{
+        power: 10,
+        name: "Rifle"
+      }, {
+        power: 5,
+        name: "Shotgun"
+      }, {
+        power: 3,
+        name: "Pistol"
+    }];
+  
+    this.difficulty = [{
+        name: "Easy",
+        value: 1200
+      }, {
+        name: "Medium",
+        value: 1000
+      }, {
+        name: "Hard",
+        value: 700
+    }];
   
     this.earnPoints = function(){
       return this.points = this.points + 1000;

@@ -39,11 +39,14 @@
         </fieldset>
         <fieldset>
           <legend>Difficulty Level</legend>
-          <select ng-model="user.difficulty" required>
-            <option value="">-- Select lvl --</option>
-            <option value="1200">Easy</option>
-            <option value="1000">Medium</option>
-            <option value="700">Hard</option>
+          <select ng-model="user.difficulty" ng-options="level.name for level in difficulty" required>
+            <option value="">-- Select Difficulty --</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <legend>Weapon</legend>
+          <select ng-model="user.weapon" ng-options="weapon.name for weapon in weapons" required>
+            <option value="">-- Select weapon --</option>
           </select>
         </fieldset>
         <fieldset>
@@ -51,7 +54,6 @@
         </fieldset>          
       </form>
 	</section>
-	
 
 	
 	<section ng-if="hideMenu" class="game-area-section">
