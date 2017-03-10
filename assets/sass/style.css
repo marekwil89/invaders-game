@@ -114,20 +114,7 @@ li.ng-enter {
 li.ng-leave {
   animation: lightSpeedOut 0.3s linear; }
 
-/* line 10, C:/Users/User/Desktop/game/assets/sass/style.sass */
-.only-for-desktop {
-  display: none;
-  justify-content: center;
-  align-items: center;
-  background: #111111;
-  width: 100%;
-  min-height: 100vh; }
-  /* line 18, C:/Users/User/Desktop/game/assets/sass/style.sass */
-  .only-for-desktop h2 {
-    color: #E53A40;
-    font-size: 27px; }
-
-/* line 22, C:/Users/User/Desktop/game/assets/sass/style.sass */
+/* line 12, C:/Users/User/Desktop/game/assets/sass/style.sass */
 *, body {
   margin: 0;
   letter-spacing: 4px;
@@ -136,7 +123,7 @@ li.ng-leave {
   font-weight: 700;
   text-transform: uppercase;
   position: relative; }
-  /* line 31, C:/Users/User/Desktop/game/assets/sass/style.sass */
+  /* line 21, C:/Users/User/Desktop/game/assets/sass/style.sass */
   * .open-rulez, body .open-rulez {
     z-index: 80;
     position: absolute;
@@ -146,7 +133,20 @@ li.ng-leave {
     right: 10px;
     color: #F1F1F1; }
 
-/* line 41, C:/Users/User/Desktop/game/assets/sass/style.sass */
+/* line 30, C:/Users/User/Desktop/game/assets/sass/style.sass */
+.only-for-desktop {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: #111111;
+  width: 100%;
+  min-height: 100vh; }
+  /* line 38, C:/Users/User/Desktop/game/assets/sass/style.sass */
+  .only-for-desktop h2 {
+    color: #E53A40;
+    font-size: 27px; }
+
+/* line 42, C:/Users/User/Desktop/game/assets/sass/style.sass */
 .rulez-modal {
   position: fixed;
   top: 0;
@@ -158,7 +158,7 @@ li.ng-leave {
   justify-content: center;
   align-items: center;
   z-index: 99; }
-  /* line 53, C:/Users/User/Desktop/game/assets/sass/style.sass */
+  /* line 54, C:/Users/User/Desktop/game/assets/sass/style.sass */
   .rulez-modal .rulez-box {
     padding: 50px;
     background: #111111;
@@ -166,33 +166,33 @@ li.ng-leave {
     width: 700px;
     border: 2px solid #E53A40;
     position: relative; }
-    /* line 61, C:/Users/User/Desktop/game/assets/sass/style.sass */
+    /* line 62, C:/Users/User/Desktop/game/assets/sass/style.sass */
     .rulez-modal .rulez-box .close-rulez {
       cursor: pointer;
       position: absolute;
       top: 10px;
       font-size: 30px;
       right: 10px; }
-    /* line 68, C:/Users/User/Desktop/game/assets/sass/style.sass */
+    /* line 69, C:/Users/User/Desktop/game/assets/sass/style.sass */
     .rulez-modal .rulez-box h2 {
       font-size: 40px; }
-      /* line 71, C:/Users/User/Desktop/game/assets/sass/style.sass */
+      /* line 72, C:/Users/User/Desktop/game/assets/sass/style.sass */
       .rulez-modal .rulez-box h2 span {
         color: #E53A40; }
-    /* line 74, C:/Users/User/Desktop/game/assets/sass/style.sass */
+    /* line 75, C:/Users/User/Desktop/game/assets/sass/style.sass */
     .rulez-modal .rulez-box figure {
       width: 100%;
       margin: 30px 0; }
-      /* line 78, C:/Users/User/Desktop/game/assets/sass/style.sass */
+      /* line 79, C:/Users/User/Desktop/game/assets/sass/style.sass */
       .rulez-modal .rulez-box figure img {
         width: 100%; }
-    /* line 81, C:/Users/User/Desktop/game/assets/sass/style.sass */
+    /* line 82, C:/Users/User/Desktop/game/assets/sass/style.sass */
     .rulez-modal .rulez-box p {
       text-align: justify;
       font-size: 20px;
       line-height: 35px; }
 
-/* line 86, C:/Users/User/Desktop/game/assets/sass/style.sass */
+/* line 87, C:/Users/User/Desktop/game/assets/sass/style.sass */
 .menu-section {
   min-height: 100vh;
   width: 100%;
@@ -201,11 +201,11 @@ li.ng-leave {
   align-items: center;
   flex-direction: column;
   background: #111111; }
-  /* line 95, C:/Users/User/Desktop/game/assets/sass/style.sass */
+  /* line 96, C:/Users/User/Desktop/game/assets/sass/style.sass */
   .menu-section .player-points {
     color: #E53A40;
     font-size: 25px; }
-  /* line 99, C:/Users/User/Desktop/game/assets/sass/style.sass */
+  /* line 100, C:/Users/User/Desktop/game/assets/sass/style.sass */
   .menu-section .glitch {
     font-family: 'Archivo Black', sans-serif;
     margin: 50px 0;
@@ -214,10 +214,10 @@ li.ng-leave {
     position: relative;
     color: #F1F1F1;
     font-weight: 800; }
-    /* line 108, C:/Users/User/Desktop/game/assets/sass/style.sass */
+    /* line 109, C:/Users/User/Desktop/game/assets/sass/style.sass */
     .menu-section .glitch .red-dot {
       color: #E53A40; }
-    /* line 111, C:/Users/User/Desktop/game/assets/sass/style.sass */
+    /* line 112, C:/Users/User/Desktop/game/assets/sass/style.sass */
     .menu-section .glitch::before, .menu-section .glitch::after {
       content: attr(data-text);
       position: absolute;
@@ -225,31 +225,31 @@ li.ng-leave {
       top: 0;
       left: 0;
       width: 100%; }
-    /* line 119, C:/Users/User/Desktop/game/assets/sass/style.sass */
+    /* line 120, C:/Users/User/Desktop/game/assets/sass/style.sass */
     .menu-section .glitch::before {
       left: 10px;
       text-shadow: -15px 0 #49fc00;
       clip: rect(24px, 600px, 90px, 0);
       animation: glitch-anim-2 0.4s infinite linear alternate-reverse; }
-    /* line 125, C:/Users/User/Desktop/game/assets/sass/style.sass */
+    /* line 126, C:/Users/User/Desktop/game/assets/sass/style.sass */
     .menu-section .glitch::after {
       left: -6px;
       text-shadow: -16px 0 #b300fc;
       clip: rect(85px, 600px, 140px, 0);
       animation: glitch-anim 0.3s infinite linear alternate-reverse; }
-  /* line 131, C:/Users/User/Desktop/game/assets/sass/style.sass */
+  /* line 132, C:/Users/User/Desktop/game/assets/sass/style.sass */
   .menu-section form {
     width: 600px; }
-    /* line 134, C:/Users/User/Desktop/game/assets/sass/style.sass */
+    /* line 135, C:/Users/User/Desktop/game/assets/sass/style.sass */
     .menu-section form fieldset {
       width: 100%;
       margin: 20px 0; }
-      /* line 138, C:/Users/User/Desktop/game/assets/sass/style.sass */
+      /* line 139, C:/Users/User/Desktop/game/assets/sass/style.sass */
       .menu-section form fieldset legend {
         color: #F1F1F1;
         font-size: 20px;
         margin: 20px 0; }
-      /* line 143, C:/Users/User/Desktop/game/assets/sass/style.sass */
+      /* line 144, C:/Users/User/Desktop/game/assets/sass/style.sass */
       .menu-section form fieldset select, .menu-section form fieldset input[type=text] {
         color: #111111;
         border-radius: 5px;
@@ -258,7 +258,7 @@ li.ng-leave {
         width: 100%;
         background: #F1F1F1;
         font-size: 20px; }
-      /* line 152, C:/Users/User/Desktop/game/assets/sass/style.sass */
+      /* line 153, C:/Users/User/Desktop/game/assets/sass/style.sass */
       .menu-section form fieldset input[type=submit] {
         cursor: pointer;
         display: block;
@@ -269,7 +269,7 @@ li.ng-leave {
         padding: 10px;
         font-size: 23px; }
 
-/* line 162, C:/Users/User/Desktop/game/assets/sass/style.sass */
+/* line 163, C:/Users/User/Desktop/game/assets/sass/style.sass */
 .game-area-section {
   width: 100%;
   min-height: 100vh;
@@ -277,42 +277,42 @@ li.ng-leave {
   background-image: url("../images/limbo-bg.png");
   background-size: cover;
   background-repeat: no-repeat; }
-  /* line 171, C:/Users/User/Desktop/game/assets/sass/style.sass */
+  /* line 172, C:/Users/User/Desktop/game/assets/sass/style.sass */
   .game-area-section .player-points {
     color: #E53A40;
     position: absolute;
     top: 10px;
     left: 10px;
     font-size: 25px; }
-  /* line 178, C:/Users/User/Desktop/game/assets/sass/style.sass */
+  /* line 179, C:/Users/User/Desktop/game/assets/sass/style.sass */
   .game-area-section .enemies-box {
     position: relative;
     width: 100%;
     min-height: 100vh;
     cursor: crosshair;
     overflow: hidden; }
-    /* line 185, C:/Users/User/Desktop/game/assets/sass/style.sass */
+    /* line 186, C:/Users/User/Desktop/game/assets/sass/style.sass */
     .game-area-section .enemies-box .enemy {
       position: absolute;
       width: 150px;
       color: #F1F1F1;
       transition: 0.3s all; }
-      /* line 191, C:/Users/User/Desktop/game/assets/sass/style.sass */
+      /* line 192, C:/Users/User/Desktop/game/assets/sass/style.sass */
       .game-area-section .enemies-box .enemy p {
         text-align: center;
         font-size: 18px;
         margin: 5px 0; }
-      /* line 196, C:/Users/User/Desktop/game/assets/sass/style.sass */
+      /* line 197, C:/Users/User/Desktop/game/assets/sass/style.sass */
       .game-area-section .enemies-box .enemy .hp-bar {
         background: #E53A40;
         width: 100%;
         height: 10px; }
 
-/* line 201, C:/Users/User/Desktop/game/assets/sass/style.sass */
+/* line 202, C:/Users/User/Desktop/game/assets/sass/style.sass */
 .progress-bar {
   position: relative;
   height: 20px; }
-  /* line 205, C:/Users/User/Desktop/game/assets/sass/style.sass */
+  /* line 206, C:/Users/User/Desktop/game/assets/sass/style.sass */
   .progress-bar .progress-bar-bar {
     transform: scale(0.8);
     position: absolute;
@@ -323,18 +323,18 @@ li.ng-leave {
     height: 100%; }
 
 @media screen and (max-width: 768px) {
-  /* line 216, C:/Users/User/Desktop/game/assets/sass/style.sass */
-  .menu-section, .game-area-section, .rulez-modal {
+  /* line 217, C:/Users/User/Desktop/game/assets/sass/style.sass */
+  .menu-section, .game-area-section, .rulez-modal, .open-rulez {
     display: none; }
-  /* line 218, C:/Users/User/Desktop/game/assets/sass/style.sass */
+  /* line 219, C:/Users/User/Desktop/game/assets/sass/style.sass */
   .only-for-desktop {
     display: flex; } }
 
 @media screen and (max-height: 630px) {
-  /* line 222, C:/Users/User/Desktop/game/assets/sass/style.sass */
-  .menu-section, .game-area-section, .rulez-modal {
+  /* line 223, C:/Users/User/Desktop/game/assets/sass/style.sass */
+  .menu-section, .game-area-section, .rulez-modal, .open-rulez {
     display: none; }
-  /* line 224, C:/Users/User/Desktop/game/assets/sass/style.sass */
+  /* line 225, C:/Users/User/Desktop/game/assets/sass/style.sass */
   .only-for-desktop {
     display: flex; } }
 

@@ -7,17 +7,7 @@ $dark: #111111
 $gray: #555555
 $red: #E53A40
   
-.only-for-desktop
-  display: none
-  justify-content: center
-  align-items: center
-  background: $dark
-  width: 100%
-  min-height: 100vh
 
-  h2
-    color: $red
-    font-size: 27px
   
 *, body
   margin: 0
@@ -37,6 +27,17 @@ $red: #E53A40
     right: 10px
     color: $white
 
+.only-for-desktop
+  display: none
+  justify-content: center
+  align-items: center
+  background: $dark
+  width: 100%
+  min-height: 100vh
+
+  h2
+    color: $red
+    font-size: 27px
   
 .rulez-modal
   position: fixed
@@ -213,13 +214,13 @@ $red: #E53A40
     
     
 @media screen and (max-width: 768px)
-  .menu-section, .game-area-section,.rulez-modal
+  .menu-section, .game-area-section,.rulez-modal, .open-rulez
     display: none
   .only-for-desktop
     display: flex
     
 @media screen and (max-height: 630px)
-  .menu-section, .game-area-section,.rulez-modal
+  .menu-section, .game-area-section,.rulez-modal, .open-rulez
     display: none
   .only-for-desktop
     display: flex
