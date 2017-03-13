@@ -18,7 +18,7 @@ app.controller('appCtrl', function($scope, $interval, enemyService, randomServic
 	$scope.createNewUser = function(newUser){
 		var data = {
 			name: newUser.name,
-            difficulty: newUser.difficulty,
+      difficulty: newUser.difficulty,
 			weapon: newUser.weapon,
 		}
 		$scope.activeUser = userService.newUser(data)
