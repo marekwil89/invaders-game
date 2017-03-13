@@ -2,6 +2,7 @@ var app = angular.module('app', ['ngAnimate'])
 
 app.controller('appCtrl', function($scope, $interval, enemyService, randomService, userService, soundService) {
 
+    var mainThemeSound = soundService.mainThemeSound
     var startGameSound = soundService.startGameSound
     var gameOverSound = soundService.gameOverSound
     var enemyHitSound = soundService.enemyHitSound
@@ -12,12 +13,7 @@ app.controller('appCtrl', function($scope, $interval, enemyService, randomServic
     $scope.hideMenu = false;
     $scope.weapons = userService.weapons;
     $scope.difficulty = userService.difficulty;
-    
-    
-    
-    $scope.enemyPosition = function(enemy){
-      return enemyService.setEnemyOnArea(enemy)
-    };
+    mainThemeSound.play()
 
 	$scope.createNewUser = function(newUser){
 		var data = {
@@ -31,7 +27,10 @@ app.controller('appCtrl', function($scope, $interval, enemyService, randomServic
 	}
 	
     var startGame = function(){
+      mainThemeSound.pause()
+      mainThemeSound.currentTime = 0;
       startGameSound.play()
+
       $scope.activeUser.points = userService.resetPoints()
       
       var enemyInterval = $interval(function () {
@@ -49,9 +48,11 @@ app.controller('appCtrl', function($scope, $interval, enemyService, randomServic
         $scope.enemies = enemyService.getEnemies()
         if($scope.enemies.length >= $scope.numToFail){
           gameOverSound.play()
+          mainThemeSound.play()
           $scope.hideMenu = false
           $interval.cancel(enemyInterval);
           $scope.enemies = enemyService.resetArr()
+          mainThemeSound.play()
         }
       }, $scope.activeUser.difficulty.value);     
     };
@@ -62,6 +63,11 @@ app.controller('appCtrl', function($scope, $interval, enemyService, randomServic
       enemyService.enemyHit(enemyId, weapon)
       $scope.enemies = enemyService.getEnemies()
     }
+    
+    $scope.enemyPosition = function(enemy){
+      return enemyService.setEnemyOnArea(enemy)
+    };    
+
 })
 
 app.service('userService', function(){
@@ -170,17 +176,19 @@ app.service('randomService', function($window, enemyService){
 	this.wWidth = $window.innerWidth;
 
 	this.coordinateX = function() {
+    var monsterWidth = 150;
 		var randomWidth = Math.floor((Math.random() * this.wWidth) + 1);
-		if( (this.wWidth-150) < randomWidth ){
-			randomWidth = randomWidth - 150
+		if( (this.wWidth - monsterWidth) < randomWidth ){
+			randomWidth = randomWidth - monsterWidth
 		}
 		return randomWidth
 	};
    
 	this.coordinateY = function() {
 		var randomHeight = Math.floor((Math.random() * this.wHeight) + 1);
-		if( (this.wHeight-200) < randomHeight ){
-			randomHeight = randomHeight - 200;
+    var monsterHeight = 200;
+		if( (this.wHeight-monsterHeight) < randomHeight ){
+			randomHeight = randomHeight - monsterHeight;
 		}
         console.log(randomHeight)
         console.log(this.wHeight)
@@ -193,6 +201,11 @@ app.service('soundService', function(){
   this.gameOverSound = new Audio("./assets/sounds/gameOver.wav");
   this.enemyHitSound = new Audio("./assets/sounds/enemyHit.wav");
   this.enemyArriveSound = new Audio("./assets/sounds/enemyArrive.wav");
+  this.mainThemeSound = new Audio("./assets/sounds/mainTheme.mp3");
+
+  this.noSound = function(){
+
+  }
 })
 
 
