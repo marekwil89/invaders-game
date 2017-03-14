@@ -16,8 +16,7 @@
   <path fill-opacity="0.95" stroke-opacity="0.95" transform="rotate(135 21.069507598876953,20.930492401123047) " id="svg_5" stroke="#222222" class="tentacle4" fill="#222222" stroke-width="5" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" d="m21.06951,9.36572c1.67498,-26.33207 8.23764,0 0,33.85551c-8.23765,-33.85551 -1.67499,-60.18758 0,-33.85551z"/>
  </g>
 
-    <animate xlink:href="#monster-eye-dot" attributeName="cx" 
-           from="55" to="90" dur="2s" repeatCount="indefinite" repeatDur="00:10" calcMode="linear" />
+ <animate xlink:href="#monster-eye-dot" attributeName="cx" from="55" to="90" dur="2s" repeatCount="indefinite" repeatDur="00:10" calcMode="linear" />
 
 </svg>
 
