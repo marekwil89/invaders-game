@@ -13,7 +13,7 @@ app.controller('appCtrl', function($scope, $interval, enemyService, randomServic
     $scope.hideMenu = false;
     $scope.weapons = userService.weapons;
     $scope.difficulty = userService.difficulty;
-    mainThemeSound.play()
+    mainThemeSound.play().loop = true;
 
 	$scope.createNewUser = function(newUser){
 		var data = {
