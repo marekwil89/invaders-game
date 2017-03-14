@@ -15,16 +15,16 @@ app.controller('appCtrl', function($scope, $interval, enemyService, randomServic
     $scope.difficulty = userService.difficulty;
     mainThemeSound.play().loop = true;
 
-	$scope.createNewUser = function(newUser){
-		var data = {
-			name: newUser.name,
-      difficulty: newUser.difficulty,
-			weapon: newUser.weapon,
-		}
-		$scope.activeUser = userService.newUser(data)
+    $scope.createNewUser = function(newUser){
+	var data = {
+		name: newUser.name,
+      		difficulty: newUser.difficulty,
+		weapon: newUser.weapon,
+	}
+	$scope.activeUser = userService.newUser(data)
         $scope.hideMenu = true
         startGame()
-	}
+    }
 	
     var startGame = function(){
       mainThemeSound.pause()
